@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Bar Graphs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            margin-bottom: 20px;
+        }
+        .bar-graph {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 300px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .bar {
+            width: 30px;
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            margin: 0 5px;
+        }
+        .bar.price {
+            background-color: #2196f3;
+        }
+        .bar.rating {
+            background-color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Data Visualization</h1>
+    
+    <div class="container">
+        <input type="text" id="product-name" placeholder="Product Name">
+        <input type="number" id="product-price" placeholder="Price" step="0.01">
+        <input type="number" id="product-rating" placeholder="Rating" min="0" max="5" step="0.1">
+        <button id="add-product">Add Product</button>
+    </div>
+    
+    <div class="container">
+        <button id="sort-price">Sort by Price</button>
+        <button id="sort-rating">Sort by Rating</button>
+    </div>
+    
+    <div class="container">
+        <h2>Price Bar Graph</h2>
+        <div id="price-graph" class="bar-graph"></div>
+    </div>
+    
+    <div class="container">
+        <h2>Rating Bar Graph</h2>
+        <div id="rating-graph" class="bar-graph"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
